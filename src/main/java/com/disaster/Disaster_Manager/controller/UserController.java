@@ -6,6 +6,7 @@ import java.util.NoSuchElementException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -16,6 +17,7 @@ import com.disaster.Disaster_Manager.model.User;
 import com.disaster.Disaster_Manager.repository.UserRepository;
 
 @RestController
+@CrossOrigin(origins = "*")
 @RequestMapping("/api/v1/")
 public class UserController {
 	
@@ -32,7 +34,7 @@ public class UserController {
 		return "Hello";
 	}
 	
-	@PostMapping("register")
+	@PostMapping("/register")
 	public ResponseEntity<HttpStatus> Register(@RequestBody User user) {
 		System.out.println(user);
 		try {

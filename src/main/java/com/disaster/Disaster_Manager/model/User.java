@@ -4,17 +4,19 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
+//import javax.persistence.GeneratedValue;
+//import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
 
-import org.hibernate.annotations.*;
+//import org.hibernate.annotations.*;
 
 @Entity
 @Table(name = "User_tbl")
 public class User {
 	
-	@Id
+	@Id @GeneratedValue(strategy=GenerationType.AUTO)
 	@Column(name = "user_id")
 	private int UserID;
 	
