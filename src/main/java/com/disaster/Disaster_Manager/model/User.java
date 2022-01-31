@@ -29,7 +29,7 @@ public class User {
 	
 	
 	@Column(name = "email")
-	private String Email;
+	private String email;
 	
 	@Column(name = "password")
 	private String Password;
@@ -55,12 +55,15 @@ public class User {
 		super();
 	}
 
-	public User(String firstName, String lastName, String email, String password, String userName,
+	
+	
+	public User(int userID, String firstName, String lastName, String email, String password, String userName,
 			String qualification, String phoneNumber, boolean isAgreed, boolean isVerified) {
 		super();
+		UserID = userID;
 		FirstName = firstName;
 		LastName = lastName;
-		Email = email;
+		this.email = email;
 		Password = password;
 		UserName = userName;
 		Qualification = qualification;
@@ -68,7 +71,9 @@ public class User {
 		this.isAgreed = isAgreed;
 		this.isVerified = isVerified;
 	}
-	
+
+
+
 	public String getFirstName() {
 		return FirstName;
 	}
@@ -81,12 +86,23 @@ public class User {
 	public void setLastName(String lastName) {
 		LastName = lastName;
 	}
+	
+	public int getUserID() {
+		return UserID;
+	}
+
+	public void setUserID(int userID) {
+		UserID = userID;
+	}
+
 	public String getEmail() {
-		return Email;
+		return email;
 	}
+
 	public void setEmail(String email) {
-		Email = email;
+		this.email = email;
 	}
+
 	public String getPassword() {
 		return Password;
 	}
