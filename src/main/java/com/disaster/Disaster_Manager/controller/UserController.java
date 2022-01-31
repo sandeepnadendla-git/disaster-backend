@@ -31,16 +31,16 @@ public class UserController {
 		return this.userservicehp.findAll();
 	}
 	
-	@GetMapping("/Login")
-	public ResponseEntity<String> Login(@RequestBody User user){
-		
-		List<User> val  = userservicehp.log(user.getEmail(),user.getPassword());;
-		if(val.size()>0) {
-			 
-			 return new ResponseEntity<String>("Not correct", HttpStatus.ALREADY_REPORTED);
-		}
-		 return new ResponseEntity<>(HttpStatus.OK);	
-	}
+//	@GetMapping("/Login")
+//	public ResponseEntity<String> Login(@RequestBody User user){
+//		
+//		List<User> val  = userservicehp.log(user.getEmail(),user.getPassword());;
+//		if(val.size()>0) {
+//			 
+//			 return new ResponseEntity<String>("Not correct", HttpStatus.ALREADY_REPORTED);
+//		}
+//		 return new ResponseEntity<>(HttpStatus.OK);	
+//	}
 	
 	@GetMapping("/welcome")
 	public String getMessage() {

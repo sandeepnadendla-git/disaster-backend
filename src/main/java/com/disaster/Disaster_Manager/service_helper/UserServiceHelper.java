@@ -29,10 +29,10 @@ public class UserServiceHelper {
 		return userRepository.findAll();
 	}
 
-	public List<User> log( String email,String password) {
-		// TODO Auto-generated method stub
-		return userRepository.Log(email,password);
-	}
+//	public List<User> log( String email,String password) {
+//		// TODO Auto-generated method stub
+//		return userRepository.Log(email,password);
+//	}
 
 	
 }
