@@ -32,7 +32,7 @@ public class User {
 	private String email;
 	
 	@Column(name = "password")
-	private String Password;
+	private String password;
 	
 	@Column(name = "user_name")
 	private String UserName;
@@ -64,7 +64,7 @@ public class User {
 		FirstName = firstName;
 		LastName = lastName;
 		this.email = email;
-		Password = password;
+		this.password = password;
 		UserName = userName;
 		Qualification = qualification;
 		PhoneNumber = phoneNumber;
@@ -103,12 +103,19 @@ public class User {
 		this.email = email;
 	}
 
+
 	public String getPassword() {
-		return Password;
+		return password;
 	}
+
+
+
 	public void setPassword(String password) {
-		Password = password;
+		this.password = password;
 	}
+
+
+
 	public String getUserName() {
 		return UserName;
 	}
